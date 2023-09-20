@@ -12,23 +12,22 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.openbiz64.mythicalbeast.R
-import ru.openbiz64.mythicalbeast.databinding.ItemFoodBinding
+import ru.openbiz64.mythicalbeast.databinding.ItemBeastBinding
 import java.io.IOException
 
 class BeastAdapter(private var listener: Listener, private val context: Context): ListAdapter<BeastDataClass, BeastAdapter.ItemHolder>(ItemComparator()) {
 
     class ItemHolder(view: View, private val context: Context): RecyclerView.ViewHolder(view){
-        var binding = ItemFoodBinding.bind(view)
+        var binding = ItemBeastBinding.bind(view)
 
         fun setData(item: BeastDataClass, listener: Listener) = with(binding){
             tvTitle.text = item.title
-            tvDescription.text = item.mythology
-            tvCalories.text = item.id.toString()
-            tvRate.text = item.id.toString()
+            //tvTitle2.text = item.title
+            tvDescription.text = item.description
             //ivFood.setImageResource(item.imgId)
 
             try {
-                val inputStream = context.assets.open("image/" + item.picUrl + ".jpg")
+                val inputStream = context.assets.open("images/" + item.picUrl + ".jpg")
                 val bmp = BitmapDrawable.createFromStream(inputStream, null)?.toBitmap()
                 ivFood.setImageBitmap(bmp)
             } catch (e: IOException) {
@@ -42,7 +41,7 @@ class BeastAdapter(private var listener: Listener, private val context: Context)
 
         companion object{
             fun create(parent: ViewGroup, context: Context): ItemHolder{
-                return ItemHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_food, parent, false), context)
+                return ItemHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_beast, parent, false), context)
             }
         }
 

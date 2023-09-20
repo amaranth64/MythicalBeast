@@ -6,4 +6,5 @@ data class BeastDataClass(
     val title: String,
     val htmlUrl: String,
     val mythology: String,
+    val description: String,
 )

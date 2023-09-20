@@ -25,13 +25,15 @@ object DataJsonLoader {
             val title = obj.getString("Title")
             val htmlUrl = obj.getString("htmlUrl")
             val mythology = obj.getString("mythology")
+            val description = obj.getString("description")
 
             val data = BeastDataClass(
                 id,
                 picUrl,
                 title,
                 htmlUrl,
-                mythology
+                mythology,
+                description
             )
 
             list.add(data)
