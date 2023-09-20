@@ -1,0 +1,37 @@
+[
+	{
+		"Id": "176",
+		"picUrl": "pic110",
+		"Title": "Дагон",
+		"htmlUrl": "html176",
+		"mythology": "Русский"
+	},
+	{
+		"Id": "175",
+		"picUrl": "pic111",
+		"Title": "Бегемот",
+		"htmlUrl": "html175",
+		"mythology": "Русский"
+	},
+	{
+		"Id": "174",
+		"picUrl": "pic112",
+		"Title": "Стригой",
+		"htmlUrl": "html174",
+		"mythology": "Русский"
+	},
+	{
+		"Id": "173",
+		"picUrl": "pic113",
+		"Title": "Футакучи-онна",
+		"htmlUrl": "html173",
+		"mythology": "Русский"
+	},
+	{
+		"Id": "172",
+		"picUrl": "pic111",
+		"Title": "Сирин",
+		"htmlUrl": "html172",
+		"mythology": "Русский"
+	}
+]
